@@ -16,7 +16,7 @@ Route::get('/dump/{server}/{name}', function($server, $name)
 {
 	$api = new FFAPI;
 	$char = $api->loadBasicCharacter(urldecode($name), urldecode($server));
-	showDebug($char->Stats());
+	showDebug($char);
 });
 
 Route::get('/view/{server}/{name}', function($server, $name)

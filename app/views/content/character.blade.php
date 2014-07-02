@@ -51,12 +51,42 @@
 		<div class="row">
 			<div class="col-sm-10 col-sm-offset-1">
 				<div class="col-sm-12">
-					<h3>Alts</h3>
+					<h3>Classes</h3>
 					<div class="row">
 						@foreach ($character->AltClasses() as $class)
 						<div class="col-sm-4">
 							<img class="class-icon" src="{{ $class->icon() }}" alt="{{ $class->name() }}" />
 							Lvl {{ $class->level() }} {{ $class->name() }}
+						</div>
+						@endforeach
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-10 col-sm-offset-1">
+				<div class="col-sm-12">
+					<h3>Minions</h3>
+					<div class="row">
+						@foreach ($character->Minions() as $minion)
+						<div class="col-sm-4">
+							<img class="class-icon" src="{{ $minion['icon'] }}" alt="{{ $minion['name'] }}" />
+							{{{ ucwords($minion['name']) }}}
+						</div>
+						@endforeach
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-10 col-sm-offset-1">
+				<div class="col-sm-12">
+					<h3>Mounts</h3>
+					<div class="row">
+						@foreach ($character->Mounts() as $mount)
+						<div class="col-sm-4">
+							<img class="class-icon" src="{{ $mount['icon'] }}" alt="{{ $mount['name'] }}" />
+							{{{ ucwords($mount['name']) }}}
 						</div>
 						@endforeach
 					</div>

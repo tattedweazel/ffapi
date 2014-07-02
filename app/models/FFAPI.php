@@ -32,6 +32,8 @@ class BasicPlayer {
 	private $ActiveClass;
 	private $Classes;
 	private $FreeCompany;
+	private $Minions;
+	private $Mounts;
 
 
 	public function __construct(Viion\Lodestone\Character $data){
@@ -46,6 +48,8 @@ class BasicPlayer {
 		$this->ActiveClass = new PlayerActiveClass($this->Classes($data->getActiveClass()), $data->getActiveJob(), $this->Gear);
 		$this->FreeCompany = $this->setFreeCompany($data->getFreeCompany());
 		$this->Stats = $data->getStats();
+		$this->Minions = $data->getMinions();
+		$this->Mounts = $data->getMounts();
 	}
 
 	private function setMedia(Viion\Lodestone\Character $data){
@@ -132,6 +136,14 @@ class BasicPlayer {
 			return $this->Stats[$type];
 		}
 		return $this->Stats;
+	}
+
+	public function Minions(){
+		return $this->Minions;
+	}
+
+	public function Mounts(){
+		return $this->Mounts;
 	}
 
 }

@@ -1,9 +1,19 @@
 body {
     background-color: #EDEDED;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 600;
+    font-size: 1.7em;
+
+}
+
+@media only screen and (max-width: 991px){
+    body {
+        font-size: 1.4em;
+    }
 }
 
 .character-sheet {
-    margin-top: 40px;
+    margin: 40px 0;
 }
 
 .portrait-container {
