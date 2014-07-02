@@ -23,6 +23,5 @@ Route::get('/view/{server}/{name}', function($server, $name)
 {
 	$api = new FFAPI;
 	$char = $api->loadBasicCharacter(urldecode($name), urldecode($server));
-	//showDebug($char);
 	return View::make('content.character')->withCharacter($char);
 });
