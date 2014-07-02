@@ -1,0 +1,35 @@
+body {
+    background-color: #EDEDED;
+}
+
+.character-sheet {
+    margin-top: 40px;
+}
+
+.portrait-container {
+    background-color: #333;
+}
+
+.character-portrait {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+
+.class-description {}
+
+.class-description {
+    margin: 0;
+    padding:0;
+    list-style: none;
+}
+
+.class-description li {
+    margin: 10px 0px;
+}
+
+.class-icon {
+    display:inline-block;
+    width: 25px;
+    margin-right: 10px;
+}
